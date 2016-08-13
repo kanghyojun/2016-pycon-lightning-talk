@@ -4,10 +4,8 @@
   <head>
     <title>스포카와 오픈소스, 2016 pycon apac</title>
     <meta charset="utf-8">
-    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
-    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
-    <style>
-    </style>
+    <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+    <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css" rel="stylesheet" type="text/css">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
       * {
@@ -129,6 +127,29 @@ class: center, middle
 - <span class="good">번역기</span>를 사용.
 - 번역기를 이용해 <span class="good">Slack 명령어</span>로 등록.
 - 이를 이용해 <span class="good">회의도 가능</span>했음.
+
+---
+
+## <span class="spoqa">spoqa</span>/dodotable
+
+### <span class="wrong">문제</span>
+
+- SQLAlchemy에 결과값을 <span class="wrong">매번</span> `<table>`로 출력해줘야함.
+- 기존에 [datatable][datatable]을 커스텀해서 사용했기때문에 <span class="wrong">URL 보존</span>이 안됨.
+- 테이블의 "구조"와 눈에 보이는 "표현"을 <span class="wrong">분리하지</span> 못함
+
+[datatable]: https://datatables.net/
+
+---
+
+## <span class="spoqa">spoqa</span>/dodotable
+
+### <span class="good">해결</span>
+
+- `sqlalchemy.query.Query`를 받아서 <span class="good">바로</span> `<table>`로 출력.
+- 구조를 정의할 수 있는 <span class="good">객체</span> 제공.
+- 표현은 <span class="good">Jinja2 사용</span>하여 따로 분리함.
+
 
 ---
 
