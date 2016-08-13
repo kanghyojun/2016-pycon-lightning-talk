@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>스포카와 오픈소스, 2016 pycon apac</title>
     <meta charset="utf-8">
     <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
     <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
@@ -12,6 +12,7 @@
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
       * {
         color: #292a2b;
+        line-height: 1.4em;
       }
       body { font-family: 'Spoqa Han Sans'; }
       div.remark-slide-content { font-size: 35px;}
@@ -36,7 +37,7 @@
       }
       ul { list-style: square; }
       ul li {
-        margin-top: 10px;
+        margin-top: 20px;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
@@ -49,25 +50,18 @@ class: center, middle
 
 # <span class="spoqa">스포카</span>와 오픈소스
 
----
-
-class: center, middle
-
-# github/<span class="spoqa">spoqa</span>
+## 강효준 ([@admire93][gh-admire])
 
 ---
 
 ## github/<span class="spoqa">spoqa</spoqa>
 
 - [<span class="spoqa">spoqa</span>/spoqa-han-sans](https://github.com/spoqa/spoqa-han-sans)
-- [<span class="spoqa">spoqa</span>/import-order](https://github.com/spoqa/import-order/)
-- [<span class="spoqa">spoqa</span>/geofront](https://github.com/spoqa/geofront)
-- [<span class="spoqa">spoqa</span>/slack-translator](https://github.com/spoqa/slack-translator)
-- [<span class="spoqa">spoqa</span>/dodotable](https://github.com/spoqa/dodotable)
-- [<span class="spoqa">spoqa</span>/settei](https://github.com/spoqa/settei)
-- [<span class="spoqa">spoqa</span>/sqlalchmey-utc](https://github.com/spoqa/sqlalchemy-utc)
 - [<span class="spoqa">spoqa</span>/tsukkomi](https://github.com/spoqa/tsukkomi)
 - [<span class="spoqa">spoqa</span>/nirum](https://github.com/spoqa/nirum)
+- [<span class="spoqa">spoqa</span>/import-order](https://github.com/spoqa/import-order/)
+- [<span class="spoqa">spoqa</span>/slack-translator](https://github.com/spoqa/slack-translator)
+- [<span class="spoqa">spoqa</span>/settei](https://github.com/spoqa/settei)
 - ...
 
 
@@ -92,6 +86,62 @@ class: center, middle
 - <span class="good">CI에서</span>도 검사하도록
 
 [git-hook]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+
+---
+
+## <span class="spoqa">spoqa</span>/geofront
+
+### <span class="wrong">문제</span>
+
+- 하나의 SSH 키를 <span class="wrong">공유하는 것</span>은 좋지않음.
+- `authorized_keys`를 <span class="wrong">사람이 관리하는 것</span>은 유지보수 비용이 비쌈.
+
+---
+
+## <span class="spoqa">spoqa</span>/geofront
+
+### <span class="good">해결</span>
+
+- 마스터 키를 가지는 <span class="good">하나의 서버</span>가 존재
+- <span class="good">이미 public key를 등록한</span> 서비스로 인증
+- <span class="good">CLI</span>로 다 할 수 있음.
+- [https://spoqa.github.io/2014/07/09/geofront.html][spoqa-gh-geofront]
+
+[git-hook]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[spoqa-gh-geofront]: https://spoqa.github.io/2014/07/09/geofront.html
+
+---
+
+## <span class="spoqa">spoqa</span>/slack-translator
+
+### <span class="wrong">문제</span>
+
+- 스포카는 <span class="wrong">일본 지사</span>가 있음.
+- 당연히 일본어에 능숙한 사람은 <span class="wrong">소수</span>임.
+- 따라서 간단한 커뮤니케이션도 <span class="wrong">불가능</span>.
+
+---
+
+## <span class="spoqa">spoqa</span>/slack-translator
+
+### <span class="good">해결</span>
+
+- <span class="good">번역기</span>를 사용.
+- 번역기를 이용해 <span class="good">Slack 명령어</span>로 등록.
+- 이를 이용해 <span class="good">회의도 가능</span>했음.
+
+---
+
+class: center, middle
+
+# <span class="spoqa">스포카</span> 원츄
+
+## 같이 <span class="good">오픈 소스</span>합시다
+
+## [ed@spoqa.com](mailto:ed@spoqa.com) , [@admire93][gh-admire]
+
+[gh-admire]: https://github.com/admire93
+
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
