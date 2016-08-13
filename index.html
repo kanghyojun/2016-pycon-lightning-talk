@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
+    <style>
+    </style>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      * {
+        color: #292a2b;
+      }
+      body { font-family: 'Spoqa Han Sans'; }
+      div.remark-slide-content { font-size: 35px;}
+      span.spoqa {
+        color: #4c80f1;
+      }
+      span.wrong {
+        color: #ff5d5d;
+        font-weight: bold;
+      }
+      span.good {
+        color: #35d48d;
+        font-weight: bold;
+      }
+      span.dunno {
+        color: #4c80f1;
+        font-weight: bold;
+      }
+      h1, h2, h3 {
+        font-family: 'Spoqa Han Sans';
+        font-weight: bold;
+      }
+      ul { list-style: square; }
+      ul li {
+        margin-top: 10px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# <span class="spoqa">스포카</span>와 오픈소스
+
+---
+
+class: center, middle
+
+# github/<span class="spoqa">spoqa</span>
+
+---
+
+## github/<span class="spoqa">spoqa</spoqa>
+
+- [<span class="spoqa">spoqa</span>/spoqa-han-sans](https://github.com/spoqa/spoqa-han-sans)
+- [<span class="spoqa">spoqa</span>/import-order](https://github.com/spoqa/import-order/)
+- [<span class="spoqa">spoqa</span>/geofront](https://github.com/spoqa/geofront)
+- [<span class="spoqa">spoqa</span>/slack-translator](https://github.com/spoqa/slack-translator)
+- [<span class="spoqa">spoqa</span>/dodotable](https://github.com/spoqa/dodotable)
+- [<span class="spoqa">spoqa</span>/settei](https://github.com/spoqa/settei)
+- [<span class="spoqa">spoqa</span>/sqlalchmey-utc](https://github.com/spoqa/sqlalchemy-utc)
+- [<span class="spoqa">spoqa</span>/tsukkomi](https://github.com/spoqa/tsukkomi)
+- [<span class="spoqa">spoqa</span>/nirum](https://github.com/spoqa/nirum)
+- ...
+
+
+---
+
+## <span class="spoqa">spoqa</span>/import-order
+
+### <span class="wrong">문제</span>
+
+- 여러 사람이 작업하는 코드는 <span class="wrong">충돌</span>이 발생하기쉬움.
+- 여러 사람이 작업하는 코드는 <span class="wrong">불필요한 변경점</span>이 발생하기쉬움.
+- <span class="wrong">리뷰어가 하나 하나</span> 고치자고 할수없음.
+
+---
+
+## <span class="spoqa">spoqa</span>/import-order
+
+### <span class="good">해결</span>
+
+- A-Z 순으로 <span class="good">정렬하기</span>로함
+- [git hook][git-hook]을 이용해서 <span class="good">커밋할때</span> 체크하도록
+- <span class="good">CI에서</span>도 검사하도록
+
+[git-hook]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
